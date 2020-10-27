@@ -12,6 +12,18 @@
     </style>
     <meta charset="utf-8">
     <script>
+        
+        
+        function verify(){
+            var key = 1;
+            while(key){
+                var enterps = prompt("Please Eneter Password");
+                if(enterps == "1234"){
+                    key == 0
+                }
+            }
+        }
+        window.onlaod(verify)
         // function loadXMLDoc()
         // {
         //     var url = "https://sheets.googleapis.com/v4/spreadsheets/1hNQmlYJpCsNchvmCmjJxGCQIH_ItoA9hG8HsFEZLKhE/values:batchGet?dateTimeRenderOption=FORMATTED_STRING&majorDimension=DIMENSION_UNSPECIFIED&ranges=%E5%B7%A5%E4%BD%9C%E8%A1%A83!A%3AE&valueRenderOption=FORMATTED_VALUE&key=AIzaSyCkGVQfrH7sqzjaKOR6Z1inbBFQSPE0j-k"
@@ -62,6 +74,8 @@
 
         function loadXMLDoc() {
             var tbody = document.getElementById("dataTable")  //获取当前页面的 Table
+            tbody.innerHTML = '<tbody id="dataTable"><tr><th style="width: 2cm;">手机号</th><th style="width: 1cm;">登记时间</th><th style="width: 3cm;">客人姓名</th><th style="width: 3cm;">読み方</th><th style="width: 4cm;">住所</th><th style="width: 1.5cm;">担当者</th><th style="width: 2cm;">微信</th><th style="width: 2cm;">接听电话时间</th><th style="width: 2cm;">在留卡照片</th><th style="width: 3cm;">受付番号</th></tr></tbody>'
+            //创建表头，不登录连表头都看不到
             var datas = JSON.parse(xmlhttp.responseText).valueRanges[0].values  //解析数据库资料
             console.log(datas);  //调试期间使用 
             //var tobody = document.getElementById("dataTable");  
@@ -73,22 +87,22 @@
                 }
                 for (var u = 0; u < data.length; u++) {            //遍历每行元素的每个单元格
                     var th = document.createElement("th");      //创建新的单元格
-                    if (data[u].indexOf("https://") == -1 && data[u].indexOf("http://") == -1) {
-                        if(data[u]==""){
-                            th.innerText="未上传内容"
+                    if (data[u].indexOf("https://") == -1 && data[u].indexOf("http://") == -1) {  //如果有空单元格内容不包含链接
+                        if(data[u]==""){          //若单元格为空
+                            th.innerText="未填写"
                         }else{
-                        th.innerText = data[u];
+                        th.innerText = data[u];  //如果不是空就正常表示
                         }
-                        tr.appendChild(th);
-                    } else {
-                        var a = document.createElement("a");
-                        a.href = data[u];
+                        tr.appendChild(th);     //添加整行
+                    } else {                                                                       //如果单元格内容包含链接
+                        var a = document.createElement("a");            //插入Link
+                        a.href = data[u];                               //链接地址即为表格内容
                         a.innerHTML = "点击查看证件";
                         a.target = "_blank";
                         th.appendChild(a);
                         tr.appendChild(th)
                     }
-                    tbody.appendChild(tr)
+                    tbody.appendChild(tr)                 //插入整行
                 }
 
             }
@@ -107,7 +121,7 @@
     <button type="button" onclick="loadXMLDoc()">获取内容</button>
     <table>
         <tbody id="dataTable">
-            <tr>
+            <!-- <tr>
                 <th style="width: 2cm;">手机号</th>
                 <th style="width: 1cm;">登记时间</th>
                 <th style="width: 3cm;">客人姓名</th>
@@ -118,7 +132,7 @@
                 <th style="width: 2cm;">接听电话时间</th>
                 <th style="width: 2cm;">在留卡照片</th>
                 <th style="width: 3cm;">受付番号</th>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </body>
