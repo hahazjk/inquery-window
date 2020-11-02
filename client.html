@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+    <script  src="https://raw.githubusercontent.com/hahazjk/inquery-window/main/script.js"></script>
     <style>
         table,
         table tr th,
@@ -10,20 +12,21 @@
             font-size: 75%;
         }
     </style>
-    <meta charset="utf-8">
-    <script>
+    <meta charset="utf-8"></meta>
+
+    <!-- <script>
         
         
-        function verify(){
-            var key = 1;
-            while(key){
-                var enterps = prompt("Please Eneter Password");
-                if(enterps == "1234"){
-                    key = 0
-                }
-            }
-        }
-        verify()
+        // function verify(){
+        //     var key = 1;
+        //     while(key){
+        //         var enterps = prompt("Please Eneter Password");
+        //         if(enterps == "1234"){
+        //             key = 0
+        //         }
+        //     }
+        // }
+        // verify()
         //window.onlaod(verify)
         // function loadXMLDoc()
         // {
@@ -111,15 +114,20 @@
 
 
 
-    </script>
+    </script> -->
 </head>
 
 <body>
 
     <div id="myDiv">
         <h2>根据权限获取相应内容</h2>
-    </div>
-    <button type="button" onclick="loadXMLDoc()">获取内容</button>
+    
+    <input type="text" id="username" placeholder="Username">
+    <br>
+    <input type="password" id ="pw" placeholder="Password">
+    <button type="button" id = "submit">获取内容</button>
+    <p id="countbar"></p>
+</div>
     <table>
         <tbody id="dataTable">
             <!-- <tr>
