@@ -179,11 +179,6 @@ function loadXMLDoc() {
 
     }else{alert("账号或密码错误")};
 }
-window.onload=function(){
-var submitbtn = document.getElementById("submit");
-submitbtn.addEventListener("click",loadXMLDoc);
-}
-
 
     </script>
 </head>
@@ -196,7 +191,7 @@ submitbtn.addEventListener("click",loadXMLDoc);
     <input type="text" id="username" placeholder="Username">
     <br>
     <input type="password" id ="pw" placeholder="Password">
-    <button type="button" id = "submit">获取内容</button>
+    <button type="button" id = "submit" onclick="loadXMLDoc()">获取内容</button>
     <p id="countbar"></p>
 </div>
     <table>
