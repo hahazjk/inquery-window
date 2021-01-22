@@ -1,2 +1,5 @@
-//这里是js
-console.log($("#h1").innerText);
+//这里是js 由于是在标题处加载，所以要添加onload
+window.onload = function () {
+    console.log($("#h1")[0].innerText);
+    alert("loaded")
+}
