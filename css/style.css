@@ -5,7 +5,7 @@
 
  html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto; 
 }
 /*----------- general------------- */ 
 body {
