@@ -30,6 +30,7 @@ h1.name {
 }
 
 h6.info {
+  font-family: emoji;
   font-size: 18px;
   text-align: -webkit-center;
   padding: 20px;
