@@ -5,6 +5,7 @@
 
  html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: auto;
 }
 /*----------- general------------- */ 
 body {
@@ -133,7 +134,7 @@ a:hover, a:link, a:visited, a:active {
 	background-position: center;
 	min-height: 200px;
   max-height: 700px;
-	width: 100%;
+	width: auto;
   background-size: 100%;
   background-size: cover;
   background: #e7e5e4;
