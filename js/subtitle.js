@@ -52,4 +52,3 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 3000);
-//# sourceURL=pen.js
