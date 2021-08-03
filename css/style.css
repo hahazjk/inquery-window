@@ -5,7 +5,6 @@
 
  html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: auto; 
 }
 /*----------- general------------- */ 
 body {
@@ -67,6 +66,7 @@ a:hover, a:link, a:visited, a:active {
 .resume-section {
   padding-top: 60px;
   padding-bottom: 60px;
+  -webkit-text-size-adjust: auto; 
 }
 
 .centered {
