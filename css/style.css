@@ -135,8 +135,8 @@ a:hover, a:link, a:visited, a:active {
 	min-height: 200px;
   max-height: 700px;
 	width: auto;
-  background-size: 100%;
-  background-size: cover;
+  background-size: auto;
+  /* background-size: cover; */
   background: #e7e5e4;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
