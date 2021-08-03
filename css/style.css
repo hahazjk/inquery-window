@@ -146,10 +146,10 @@ a:hover, a:link, a:visited, a:active {
   -o-background-size: cover;
 }
 
-/* #headerwrap h1 {
+#headerwrap h1 {
   background: #e7e5e4;
 	margin: 0px;
-} */
+}
 
 #headerwrap h3 {
 	font-size: 40px;
