@@ -448,7 +448,7 @@ pre.line-numbers > code {
         
         
         .word {
-          position: fixed;
+          position: absolute;
           /* width: 220px; */
           opacity: 0;
         }
